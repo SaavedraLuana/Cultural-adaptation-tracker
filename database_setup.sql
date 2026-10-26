@@ -94,4 +94,13 @@ CREATE TABLE SocialPerceptionExperiences (
     reflection TEXT,
 
     FOREIGN KEY (user_id) REFERENCES Users(user_id)
-);
+-- Cultural Adaptation Improvements
+
+ALTER TABLE CulturalAdaptations
+ADD COLUMN adaptation_type VARCHAR(50);
+
+ALTER TABLE CulturalAdaptations
+ADD COLUMN original_custom_preserved BOOLEAN;
+
+ALTER TABLE CulturalAdaptations
+ADD COLUMN cultural_context TEXT;
