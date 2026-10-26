@@ -80,3 +80,18 @@ VALUES
 (1, 1, '2023-03-31', 4, 3, 5),
 (2, 1, '2023-04-30', 6, 5, 7),
 (3, 1, '2023-05-31', 7, 7, 8);
+-- Social Perception & Cultural Capital Experiences
+
+CREATE TABLE SocialPerceptionExperiences (
+    experience_id INT PRIMARY KEY,
+    user_id INT NOT NULL,
+    experience_date DATE,
+    country VARCHAR(50) NOT NULL,
+    social_context VARCHAR(100),
+    cultural_capital VARCHAR(255),
+    perceived_stereotype TEXT,
+    personal_response TEXT,
+    reflection TEXT,
+
+    FOREIGN KEY (user_id) REFERENCES Users(user_id)
+);
